@@ -6,6 +6,7 @@ const projects = [
     Technologies:
       " Frontend: React.js, Tailwind CSS, JavaScript Backend: Node.js, Express.js Database: MongoDB Payment Gateway: Stripe API Other: Axios (for HTTP requests),JWT (for authentication)",
     image: "https://i.ibb.co/r5G6NMq/localhost-5173.png",
+    liveLink: "https://homedeco-d4499.web.app",
   },
   {
     title: "KFC Restaurant Clone",
