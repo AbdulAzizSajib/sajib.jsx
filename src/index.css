@@ -1,0 +1,66 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.morph-image {
+  -webkit-animation: morph 8s ease-in-out infinite;
+  animation: morph 8s ease-in-out infinite;
+  animation-duration: 8s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-fill-mode: none;
+  animation-play-state: running;
+  animation-name: morph;
+  animation-timeline: auto;
+  animation-range-start: normal;
+  animation-range-end: normal;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: 3px solid #2d2e32;
+  border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  height: 28rem;
+  position: relative;
+  transition: all 1s ease-in-out;
+  width: 28rem;
+}
+
+@keyframes morph {
+  0% {
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  }
+  50% {
+    border-radius: 40% 60% 70% 30% / 40% 70% 30% 60%;
+  }
+  100% {
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  }
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .morph-image {
+    width: 20rem;
+    height: 20rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .morph-image {
+    width: 16rem;
+    height: 16rem;
+    margin-top: 4rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .morph-image {
+    width: 12rem;
+    height: 12rem;
+    margin-top: 4rem;
+  }
+}
