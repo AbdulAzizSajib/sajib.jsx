@@ -43,7 +43,7 @@ const About = () => {
                 <button className="button" type="button">
                   <span className="button__text">Download CV</span>
                   <span className="button__icon">
-                    <FiDownload className="text-xl"></FiDownload>
+                    <FiDownload className="text-xl animate-bounce"></FiDownload>
                   </span>
                 </button>
               </a>
