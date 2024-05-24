@@ -1,3 +1,4 @@
+import { FiDownload } from "react-icons/fi";
 import aboutPic from "../../../assets/abt.jpg";
 import "./about.css";
 
@@ -37,6 +38,16 @@ const About = () => {
               where I gained more knowledge about web development, explored more
               content, and experienced many new things.
             </p>
+            <div className="mt-8">
+              <a href="https://flowcv.com/resume/gubs48fk1v" target="_blank">
+                <button className="button" type="button">
+                  <span className="button__text">Download CV</span>
+                  <span className="button__icon">
+                    <FiDownload className="text-xl"></FiDownload>
+                  </span>
+                </button>
+              </a>
+            </div>
           </div>
         </div>
       </div>

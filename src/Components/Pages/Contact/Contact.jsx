@@ -1,4 +1,5 @@
 import { FiInstagram } from "react-icons/fi";
+import { IoMdArrowForward } from "react-icons/io";
 
 const Contact = () => {
   return (
@@ -84,7 +85,12 @@ const Contact = () => {
                 data-gramm="false"
               ></textarea>
             </label>
-            <button className="self-start px-8 rounded btn ">Submit</button>
+            <button className="button" type="button">
+              <span className="button__text">Send</span>
+              <span className="button__icon">
+                <IoMdArrowForward className="text-xl"></IoMdArrowForward>
+              </span>
+            </button>
           </form>
         </div>
       </section>
