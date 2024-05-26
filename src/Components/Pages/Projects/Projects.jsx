@@ -1,4 +1,5 @@
-import { IoMdArrowForward } from "react-icons/io";
+import { FaGithub } from "react-icons/fa";
+import { TiArrowForward } from "react-icons/ti";
 
 const projects = [
   {
@@ -9,6 +10,7 @@ const projects = [
       "React, Node.js, Express.js, MongoDB, Firebase Authentication, Tailwind CSS",
     image: "https://i.ibb.co/G2XymYs/localhost-5173-3.png",
     liveLink: "https://kfcbysajib.web.app",
+    github: "https://github.com/AbdulAzizSajib/Kfc_Clone",
   },
   {
     title: "Restaurant Website",
@@ -18,6 +20,7 @@ const projects = [
       "React, Node.js, Express.js, MongoDB, Firebase Authentication, JWT, Stripe, Tailwind CSS",
     image: "https://i.ibb.co/hLt28xq/localhost-5173-5.png",
     liveLink: "https://rich-food-restaurant.web.app",
+    github: "https://github.com/AbdulAzizSajib/restaurant_website",
   },
   {
     title: "home decoration ecommerce website",
@@ -27,6 +30,7 @@ const projects = [
       " Frontend: React.js, Tailwind CSS, JavaScript Backend: Node.js, Express.js Database: MongoDB Payment Gateway: Stripe API Other: Axios (for HTTP requests),Firebase (for authentication)",
     image: "https://i.ibb.co/r5G6NMq/localhost-5173.png",
     liveLink: "https://homedeco-d4499.web.app",
+    github: "https://github.com/AbdulAzizSajib/HomeDeco_Ecommerce",
   },
 ];
 const Projects = () => {
@@ -61,7 +65,7 @@ const Projects = () => {
                 {project.Technologies}
               </p>
 
-              {project.liveLink && (
+              <div className="flex gap-5 border">
                 <a
                   href={project.liveLink}
                   target="_blank"
@@ -70,11 +74,23 @@ const Projects = () => {
                   <button className="button" type="button">
                     <span className="button__text">Live Preview</span>
                     <span className="button__icon">
-                      <IoMdArrowForward className="text-xl"></IoMdArrowForward>
+                      <TiArrowForward className="text-xl"></TiArrowForward>
                     </span>
                   </button>
                 </a>
-              )}
+                <a
+                  href={project.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <button className="button" type="button">
+                    <span className="button__text">Github Link</span>
+                    <span className="button__icon">
+                      <FaGithub className="text-xl"></FaGithub>
+                    </span>
+                  </button>
+                </a>
+              </div>
             </div>
           </div>
         </div>
