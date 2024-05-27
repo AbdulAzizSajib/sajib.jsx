@@ -3,7 +3,7 @@ import { TiArrowForward } from "react-icons/ti";
 
 const projects = [
   {
-    title: "KFC Restaurant Clone",
+    title: "KFC Website Replica",
     description:
       "Developed a responsive and feature-rich clone of the KFC website using the MERN stack and Tailwind CSS. Implemented Firebase for user authentication and developed an admin panel for managing content.User Authentication with Firebase (registration, login, role management).Responsive design using Tailwind CSS, ensuring a seamless experience across devices.Admin panel for managing menu items, orders, and users with CRUD operations",
     Technologies:
@@ -23,7 +23,7 @@ const projects = [
     github: "https://github.com/AbdulAzizSajib/restaurant_website",
   },
   {
-    title: "home decoration ecommerce website",
+    title: "Home Decor E-commerce Platform",
     description:
       "Developed a responsive and a  Home Decor  website using the MERN stack and Tailwind CSS. Implemented Firebase for user authentication and developed an admin panel for managing content.User Authentication with Firebase (registration, login, role management) Responsive design using Tailwind CSS, ensuring a seamless experience across devices.Dynamic menu display and real-time order tracking",
     Technologies:
