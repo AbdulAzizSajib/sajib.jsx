@@ -1,11 +1,19 @@
 import { FiDownload } from "react-icons/fi";
 import aboutPic from "../../../assets/abt.jpg";
 import "./about.css";
+import useTheme from "../../Hooks/useTheme";
 
 const About = () => {
+  const { theme } = useTheme();
   return (
     <div id="about" className="flex justify-center w-full min-h-screen ">
-      <div className=" hero bg-base-100">
+      <div
+        className={` hero ${
+          theme === "light"
+            ? "bg-base-100 text-black"
+            : "bg-zinc-900 text-white"
+        } `}
+      >
         <div className="flex-col hero-content lg:flex-row">
           <div className="relative">
             <img
@@ -18,7 +26,11 @@ const About = () => {
             <p className="py-6 text-2xl font-bold ">
               Front-end Developer based in Dhaka, Bangladesh 📍
             </p>
-            <p className="text-justify text-neutral-600">
+            <p
+              className={`text-justify  ${
+                theme === "light" ? "text-neutral-600" : "text-neutral-400"
+              }`}
+            >
               Hey, my name is Sajib, and I&apos;m a Frontend Developer. My
               passion is to create and develop a clean UI/UX for my users. My
               main stack currently is React/Next.js in combination with Tailwind
@@ -26,7 +38,11 @@ const About = () => {
             </p>
             <br />
             <p className="font-bold">Education</p>
-            <p className="text-justify text-neutral-600">
+            <p
+              className={`text-justify ${
+                theme === "light" ? "text-neutral-600" : "text-neutral-400"
+              }`}
+            >
               I completed my bachelor of science in Computer Science and
               Engineering from American International University of Bangladesh.
               Afterward, I took a Mern Stack web development course on
@@ -43,7 +59,7 @@ const About = () => {
                 <button className="button" type="button">
                   <span className="button__text">Download CV</span>
                   <span className="button__icon">
-                    <FiDownload className="text-xl animate-bounce"></FiDownload>
+                    <FiDownload className="text-xl text-black animate-bounce"></FiDownload>
                   </span>
                 </button>
               </a>

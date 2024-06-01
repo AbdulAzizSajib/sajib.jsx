@@ -1,5 +1,10 @@
 import { Link } from "react-scroll";
+
+import SliderToggle from "../../Toggle/SliderToggle";
+import useTheme from "../../Hooks/useTheme";
+
 const Navbar = () => {
+  const { theme } = useTheme();
   const navLink = (
     <>
       <li>
@@ -25,7 +30,11 @@ const Navbar = () => {
     </>
   );
   return (
-    <div className="fixed top-0 left-0 z-50 flex justify-between w-full pl-10 pr-10 navbar bg-base-100 ">
+    <div
+      className={`fixed top-0 left-0 z-50 flex justify-between w-full pl-10 pr-10 navbar transition-colors ${
+        theme === "light" ? "  bg-base-100" : "bg-zinc-900"
+      } `}
+    >
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -51,10 +60,24 @@ const Navbar = () => {
             {navLink}
           </ul>
         </div>
-        <a className="text-xl font-bold font-jost ">SAJIB.jsx</a>
+        <a
+          className={`text-xl font-bold ${
+            theme === "light" ? "text-black" : "text-white"
+          } `}
+        >
+          SAJIB.jsx
+        </a>
       </div>
       <div className="hidden navbar-center lg:flex">
-        <ul className="px-1 menu menu-horizontal">{navLink}</ul>
+        <ul
+          className={`px-1 menu menu-horizontal  ${
+            theme === "light" ? "text-black" : "text-white"
+          }`}
+        >
+          {navLink}
+
+          <SliderToggle></SliderToggle>
+        </ul>
       </div>
     </div>
   );

@@ -4,6 +4,28 @@
 @tailwind components;
 @tailwind utilities;
 
+/* :root {
+  --bg-color-light: #ffffff;
+  --text-color-light: #000000;
+  --bg-color-dark: #1a202c;
+  --text-color-dark: #ffffff;
+  --btn-border-color-light: #323232;
+  --btn-border-color-dark: #ffffff;
+}
+
+[data-theme="light"] {
+  --bg-color: var(--bg-color-light);
+  --text-color: var(--text-color-light);
+  --btn-border-color: var(--btn-border-color-light);
+}
+
+[data-theme="dark"] {
+  --bg-color: var(--bg-color-dark);
+  --text-color: var(--text-color-dark);
+  --btn-border-color: var(--btn-border-color-dark);
+} */
+
+/*  */
 .morph-image {
   -webkit-animation: morph 8s ease-in-out infinite;
   animation: morph 8s ease-in-out infinite;

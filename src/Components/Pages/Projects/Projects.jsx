@@ -1,5 +1,6 @@
 import { FaGithub } from "react-icons/fa";
 import { TiArrowForward } from "react-icons/ti";
+import useTheme from "../../Hooks/useTheme";
 
 const projects = [
   {
@@ -34,8 +35,14 @@ const projects = [
   },
 ];
 const Projects = () => {
+  const { theme } = useTheme();
   return (
-    <div id="projects" className="w-full min-h-screen bg-base-200">
+    <div
+      id="projects"
+      className={`w-full min-h-screen py-16 ${
+        theme === "light" ? "bg-base-200 text-black" : "bg-zinc-950 text-white"
+      } `}
+    >
       <h2 className="p-4 text-lg font-bold text-center text-blue-800 uppercase">
         Projects
       </h2>
@@ -51,21 +58,30 @@ const Projects = () => {
               <h1 className="text-xl font-semibold capitalize lg:text-3xl">
                 {project.title}
               </h1>
-              <p className="py-4 text-sm text-justify text-neutral-600 lg:text-base">
+              <p
+                className={`py-4 text-sm text-justify  lg:text-base ${
+                  theme === "light" ? "text-neutral-600" : "text-neutral-400"
+                }`}
+              >
                 {project.description}
               </p>
 
-              {/* <p className="py-4 font-bold text-justify lg:text-base">
-                Technologies Used
-              </p> */}
-              <p className="py-2 text-justify text-neutral-600 lg:text-base">
-                <h2 className="font-semibold text-black capitalize">
+              <p
+                className={`py-2 text-justify text-neutral-600 lg:text-base ${
+                  theme === "light" ? "text-neutral-600" : "text-neutral-400"
+                }`}
+              >
+                <h2
+                  className={`font-semibold  capitalize ${
+                    theme === "light" ? "text-black" : "text-white"
+                  }`}
+                >
                   Technologies Used
                 </h2>
                 {project.Technologies}
               </p>
 
-              <div className="flex gap-5 border">
+              <div className="flex gap-5 text-black">
                 <a
                   href={project.liveLink}
                   target="_blank"

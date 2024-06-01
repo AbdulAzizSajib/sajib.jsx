@@ -4,7 +4,12 @@ import { FiGithub } from "react-icons/fi";
 import pic from "../../../assets/3.jpg";
 import jwt from "../../../assets/json-web-tokens-jwt-io-seeklogo.svg";
 
+import "./Intro.css";
+import useTheme from "../../Hooks/useTheme";
+
 const Intro = () => {
+  const { theme } = useTheme(); // Use the custom hook to get the current theme
+
   const skillsCollection = [
     { skill: "https://skillicons.dev/icons?i=html" },
     { skill: "https://skillicons.dev/icons?i=css" },
@@ -21,21 +26,29 @@ const Intro = () => {
     { skill: "https://skillicons.dev/icons?i=git" },
     { skill: "https://skillicons.dev/icons?i=github" },
   ];
+
   return (
     <section
       id="home"
-      className="flex flex-col items-center justify-center min-h-screen mx-auto bg-base-200"
+      className={`flex flex-col items-center justify-center min-h-screen mx-auto transition-colors ${
+        theme === "light" ? "bg-base-200 text-black" : "bg-zinc-950 text-white"
+      }`}
     >
       {/* 1st Div */}
-
       <div>
         <div className="flex-col hero-content lg:flex lg:flex-row-reverse">
           <div className="flex justify-center w-full lg:w-1/2">
             <img src={pic} className="object-cover morph-image" />
           </div>
           <div className="w-full px-4 space-y-4 lg:w-1/2 lg:px-0">
-            <h1 className="font-semibold   text-black text-center lg:text-left lg:text-[55px] md:text-5xl sm:text-4xl">
-              Front-End React Developer
+            <h1 className="font-semibold text-center lg:text-left lg:text-[55px] md:text-5xl sm:text-4xl">
+              {" Front-End React Developer"
+                .split("")
+                .map((alhpabets, index) => (
+                  <span className="hoverText" key={index}>
+                    {alhpabets}
+                  </span>
+                ))}
             </h1>
 
             <p className="mt-2 font-light text-center lg:text-start lg:text-lg md:text-base sm:text-sm">
