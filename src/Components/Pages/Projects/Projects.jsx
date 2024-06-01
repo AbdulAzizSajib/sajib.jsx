@@ -50,7 +50,7 @@ const Projects = () => {
         <div key={index} className=" hero">
           <div className="flex-col hero-content lg:flex-row">
             <div className="relative flex justify-center ">
-              <div className="object-cover rounded-2xl shadow-lg lg:w-[700px] overflow-auto h-[500px]">
+              <div className="object-cover rounded-2xl shadow-lg lg:w-[700px] overflow-auto scr h-[500px]">
                 <img src={project.image} alt="" />
               </div>
             </div>
@@ -81,7 +81,7 @@ const Projects = () => {
                 {project.Technologies}
               </p>
 
-              <div className="flex gap-5 text-black">
+              <div className="grid grid-cols-1 gap-4 lg:grid-cols-2">
                 <a
                   href={project.liveLink}
                   target="_blank"
