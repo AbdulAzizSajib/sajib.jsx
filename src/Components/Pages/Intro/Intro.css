@@ -3,24 +3,24 @@
 }
 
 .hoverText:hover {
-  font-weight: 900;
-  color: #ff0000;
+  /* font-weight: 900; */
+  color: #ffc470;
 }
 
 .hoverText:hover + .hoverText {
-  font-weight: 500;
-  color: #054b2a;
+  /* font-weight: 500; */
+  color: #4793af;
 }
 
-.hoverText:hover + .hoverText + .hoverText {
+/* .hoverText:hover + .hoverText + .hoverText {
   font-weight: 300;
-}
+} */
 
 .hoverText:has(+ .hoverText:hover) {
-  font-weight: 500;
-  color: #054b2a;
+  /* font-weight: 500; */
+  color: #dd5746;
 }
 
-.hoverText:has(+ .hoverText + .hoverText:hover) {
+/* .hoverText:has(+ .hoverText + .hoverText:hover) {
   font-weight: 300;
-}
+} */

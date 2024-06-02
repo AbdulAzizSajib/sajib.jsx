@@ -38,14 +38,19 @@ const Intro = () => {
       <div>
         <div className="flex-col hero-content lg:flex lg:flex-row-reverse">
           <div className="flex justify-center w-full lg:w-1/2">
-            <img src={pic} className="object-cover morph-image" />
+            <img
+              src={pic}
+              className={`object-cover morph-image  ${
+                theme === "light" ? "light-border" : "dark-border"
+              }`}
+            />
           </div>
           <div className="w-full px-4 space-y-4 lg:w-1/2 lg:px-0">
             <h1 className="font-semibold text-center lg:text-left lg:text-[55px] md:text-5xl sm:text-4xl">
-              {" Front-End React Developer"
+              {"Junior Full Stack Web Developer"
                 .split("")
                 .map((alhpabets, index) => (
-                  <span className="hoverText" key={index}>
+                  <span className={`hoverText`} key={index}>
                     {alhpabets}
                   </span>
                 ))}
@@ -72,13 +77,17 @@ const Intro = () => {
         <div className="flex flex-wrap items-center justify-start gap-2 p-4 ">
           <div className="flex items-center">
             <h1 className="font-bold">Tech Stack</h1>
-            <div className="w-8 rotate-90 h-[1px] border-t-2 border-black"></div>
+            <div
+              className={`w-8 rotate-90 h-[1px] border-t-2 ${
+                theme === "light" ? "border-black" : "border-white"
+              }`}
+            ></div>
           </div>
 
           {skillsCollection.map((allSkill, index) => (
             <div key={index}>
               <img
-                className={`transition duration-300 transform hover:scale-110 ${
+                className={`transition-all duration-300 hover:-translate-y-2 transform hover:scale-110 ${
                   index === 10 && "w-[46px] bg-[#242938] p-0.5 rounded-md"
                 }`}
                 src={allSkill.skill}

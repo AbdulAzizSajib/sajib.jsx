@@ -24,17 +24,22 @@ const About = () => {
           <div className="">
             <h1 className="text-lg font-bold text-blue-800 ">ABOUT ME</h1>
             <p className="py-6 text-2xl font-bold ">
-              Front-end Developer based in Dhaka, Bangladesh 📍
+              Junior Full Stack Web Developer based in Dhaka, Bangladesh 📍
             </p>
             <p
               className={`text-justify  ${
                 theme === "light" ? "text-neutral-600" : "text-neutral-400"
               }`}
             >
-              Hey, my name is Sajib, and I&apos;m a Frontend Developer. My
-              passion is to create and develop a clean UI/UX for my users. My
-              main stack currently is React/Next.js in combination with Tailwind
-              CSS and TypeScript.
+              Hi there! 👋 I&apos;m Sajib, a junior full stack web developer
+              passionate about creating innovative and user-centric web
+              applications. I specialize in the MERN stack with strong skills in
+              HTML, CSS, JavaScript, React, Node.js, and Express.js. I also work
+              with MongoDB, Firebase, Git, GitHub, npm, Yarn, JWT, and Tailwind
+              CSS. I deploy my projects on Vercel. As a continuous learner,
+              I&apos;m always exploring new technologies and best practices.
+              I&apos;m eager to contribute to impactful projects and collaborate
+              with like-minded professionals. Let&apos;s connect!
             </p>
             <br />
             <p className="font-bold">Education</p>
