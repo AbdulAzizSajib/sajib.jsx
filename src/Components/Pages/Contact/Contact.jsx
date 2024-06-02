@@ -71,7 +71,7 @@ const Contact = () => {
                 id="name"
                 name="name"
                 placeholder=""
-                className="block w-full rounded-md shadow-sm input-bordered input "
+                className="block w-full text-black rounded-md shadow-sm input-bordered input "
               />
             </label>
             <label className="block">
@@ -81,7 +81,7 @@ const Contact = () => {
                 type="email"
                 name="email"
                 placeholder=""
-                className="block w-full rounded-md shadow-sm input-bordered input "
+                className="block w-full text-black rounded-md shadow-sm input-bordered input "
               />
             </label>
             <label className="block">
@@ -91,7 +91,7 @@ const Contact = () => {
                 rows="3"
                 id="name"
                 name="text"
-                className="block w-full rounded-md textarea-bordered textarea "
+                className="block w-full text-black rounded-md textarea-bordered textarea "
                 data-gramm="false"
               ></textarea>
             </label>
